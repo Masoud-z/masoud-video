@@ -34,7 +34,8 @@ class _PictureInPictureVideoPlayerState
     super.initState();
     floating = Floating();
     _controller = VideoPlayerController.network(
-        'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4')
+        'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4',
+        videoPlayerOptions: VideoPlayerOptions(allowBackgroundPlayback: true))
       ..initialize().then((_) {
         _controller.setLooping(true);
         _controller.play();
